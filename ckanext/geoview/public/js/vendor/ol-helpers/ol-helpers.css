@@ -2,6 +2,12 @@
 .ol-viewport > canvas {
   position: absolute;
 }
+.ol-viewport .layer-switcher {
+  max-height: 500px;
+}
+.ol-viewport .layer-switcher.active {
+  overflow-y: scroll;
+}
 .ol-viewport .layer-switcher .stacked-layers {
   position: absolute;
   right: 10px;
