@@ -24,10 +24,7 @@
         <div class="layerswitcher olControlLayerSwitcher"></div>
     </div>
 
-    {% resource 'ckanext-geoview/openlayers' %}
-    {% resource 'vendor/bootstrap' %}
-{% endblock %}
+    {% set type = 'asset' if h.ckan_version().split('.')[1] | int >= 9 else 'resource' %}
+    {% include 'geoview/snippets/openlayers_' ~ type ~ '.html' %}
 
-{% block styles %}
-    <link rel="stylesheet" href="{{ h.url_for_static('/css/bootstrap.min.css') }}" type="text/css" media="screen, projection" />
 {% endblock %}
