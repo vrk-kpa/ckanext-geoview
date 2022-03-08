@@ -137,7 +137,7 @@ def proxy_service_url(req, url):
             % error
         )
         base.abort(502, detail=details)
-    except requests.exceptions.Timeout as error:
+    except requests.exceptions.Timeout:
         details = "Could not proxy resource because the connection timed out."
         base.abort(504, detail=details)
     return response
