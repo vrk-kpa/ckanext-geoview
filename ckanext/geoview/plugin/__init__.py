@@ -43,7 +43,6 @@ class GeoViewBase(p.SingletonPlugin):
         )
 
     def update_config(self, config):
-        toolkit.add_public_directory(config, "../public")
         toolkit.add_template_directory(config, "../templates")
         toolkit.add_resource("../public", "ckanext-geoview")
 
