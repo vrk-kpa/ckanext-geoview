@@ -43,8 +43,9 @@ class GeoViewBase(p.SingletonPlugin):
         )
 
     def update_config(self, config):
+        toolkit.add_public_directory(config, "../public")
         toolkit.add_template_directory(config, "../templates")
-        toolkit.add_resource("../public", "ckanext-geoview")
+        toolkit.add_resource("../assets", "ckanext-geoview")
 
         self.proxy_enabled = "resource_proxy" in toolkit.config.get(
             "ckan.plugins", ""
