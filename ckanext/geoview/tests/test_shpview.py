@@ -32,6 +32,6 @@ def test_geojson_view_is_rendered(app):
             )
         
         res = app.get(url)
-        assert 'class="resource-view"' in res.get_data(as_text=True)
-        assert 'data-title="{}"'.format(view_default_title) in res.get_data(as_text=True)
-        assert 'id="view-' in res.get_data(as_text=True)
+        assert 'class="resource-view"' in res.body
+        assert 'data-title="{}"'.format(view_default_title) in res.body
+        assert 'id="view-' in res.body
