@@ -11,13 +11,26 @@ def test_geojson_view_is_rendered(app):
     dataset = factories.Dataset()
 
     for format in SHPView.SHP:
-        geojson = factories.Resource(
+        resource = factories.Resource(
             name='My Resource',
             format=format,
             package_id=dataset['id']
         )
 
-        url = toolkit.url_for("resource_read", id=geojson["package_id"], resource_id=geojson["id"])
+        if toolkit.check_ckan_version("2.9"):
+            url = toolkit.url_for(
+                "{}_resource.read".format(dataset["type"]),
+                id=dataset["name"],
+                resource_id=resource["id"],
+            )
+        else:
+            url = toolkit.url_for(
+                controller="package",
+                action="resource_read",
+                id=resource["package_id"],
+                resource_id=resource["id"],
+            )
+        
         res = app.get(url)
         assert 'class="resource-view"' in res.get_data(as_text=True)
         assert 'data-title="{}"'.format(view_default_title) in res.get_data(as_text=True)
