@@ -3,14 +3,14 @@ import pytest
 from ckan.tests import factories
 from ckan.plugins import toolkit
 
-from ckanext.geoview.plugin import GeoJSONView
+from ckanext.geoview.plugin import SHPView
 
-@pytest.mark.ckan_config('ckan.views.default_views', 'geojson_view')
+@pytest.mark.ckan_config('ckan.views.default_views', 'shp_view')
 def test_geojson_view_is_rendered(app):
-    view_default_title = GeoJSONView().info()["title"]
+    view_default_title = SHPView().info()["title"]
     dataset = factories.Dataset()
 
-    for format in GeoJSONView.GeoJSON:
+    for format in SHPView.SHP:
         geojson = factories.Resource(
             name='My Resource',
             format=format,
