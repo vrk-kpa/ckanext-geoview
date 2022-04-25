@@ -6,9 +6,6 @@ from six.moves.urllib.parse import urlencode, urlsplit, parse_qs
 
 import requests
 
-import ckan.lib.helpers as h
-import ckan.logic as logic
-
 from ckan import plugins as p
 from ckan.plugins import toolkit
 
@@ -43,7 +40,7 @@ def proxy_service_resource(request, context, data_dict):
     than the maximum file size. """
     resource_id = data_dict["resource_id"]
     log.info("Proxify resource {id}".format(id=resource_id))
-    resource = logic.get_action("resource_show")(context, {"id": resource_id})
+    resource = toolkit.get_action("resource_show")(context, {"id": resource_id})
     url = resource["url"]
     return proxy_service_url(request, url)
 
@@ -210,7 +207,7 @@ def get_proxified_service_url(data_dict):
     :param data_dict: contains a resource and package dict
     :type data_dict: dictionary
     """
-    url = h.url_for(
+    url = toolkit.url_for(
         action="proxy_service",
         controller='service_proxy',
         id=data_dict["package"]["name"],
