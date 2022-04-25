@@ -5,11 +5,11 @@ import logging
 import mimetypes
 from six.moves.urllib.parse import urlparse
 
-import ckantoolkit as toolkit
 
 from ckan import plugins as p
 from ckan.common import json
 from ckan.lib.datapreview import on_same_domain
+from ckan.plugins import toolkit
 
 import ckanext.geoview.utils as utils
 
