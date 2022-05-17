@@ -83,6 +83,9 @@ def proxy_service_url(req, url):
         else:
             r = requests.get(url, params=req.query_string, stream=True)
 
+        if not r.ok:
+            base.abort(502, detail="Calling resource URL failed")
+
         # log.info('Request: {req}'.format(req=r.request.url))
         # log.info('Request Headers: {h}'.format(h=r.request.headers))
 
