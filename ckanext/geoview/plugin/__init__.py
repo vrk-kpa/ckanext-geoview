@@ -286,7 +286,7 @@ class SHPView(GeoViewBase):
 
     def can_view(self, data_dict):
         resource = data_dict["resource"]
-        format_lower = resource["format"].lower()
+        format_lower = resource.get("format", "").lower()
         name_lower = resource.get("name", "").lower()
         same_domain = on_same_domain(data_dict)
 
