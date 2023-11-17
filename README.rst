@@ -310,7 +310,7 @@ Common base layers for Map Widgets
 
 The geospatial view plugins support the same base map configurations than the ckanext-spatial `widgets`_.
 
-Check the following page to learn how to choose a different base map layer (Stamen, MapBox or custom):
+Check the following page to learn how to choose a different base map layer:
 
 http://docs.ckan.org/projects/ckanext-spatial/en/latest/map-widgets.html
 
