@@ -1,0 +1,26 @@
+{
+  "name": "ckanext-geoview",
+  "version": "0.1.0",
+  "description": "CKAN Geospatial ResourceView",
+  "dependencies": {
+    "leaflet": "1.9.4",
+    "leaflet-providers": "2.0.0",
+    "proj4leaflet": "1.0.2",
+    "proj4": "^2.11.0",
+    "gulp": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ckan/ckanext-geoview.git"
+  },
+  "scripts": {
+    "update-libs": "gulp updateVendorLibs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "AGPL",
+  "bugs": {
+    "url": "https://github.com/ckan/ckanext-geoview/issues"
+  },
+  "homepage": "https://github.com/ckanext-geoview/ckan"
+}
