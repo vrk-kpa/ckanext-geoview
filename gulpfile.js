@@ -24,10 +24,28 @@ const proj4 = () =>
     dest(libs_dir + "/proj4/dist/" )
   );
 
+const openlayers = () =>
+  src(__dirname + "/node_modules/ol/dist/ol.js*").pipe(
+    dest(libs_dir + "/openlayers/dist/" )
+  );
+
+const openlayers_css = () =>
+  src(__dirname + "/node_modules/ol/ol.css").pipe(
+    dest(libs_dir + "/openlayers/dist/" )
+  );
+
+
+const underscore = () =>
+  src(__dirname + "/node_modules/underscore/underscore-min.js*").pipe(
+    dest(libs_dir + "/underscore/" )
+  );
 
 exports.updateVendorLibs = parallel(
   leaflet,
   leaflet_providers,
   proj4leaflet,
-  proj4
+  proj4,
+  openlayers,
+  openlayers_css,
+  underscore
 );
