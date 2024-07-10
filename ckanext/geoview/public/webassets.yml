@@ -69,13 +69,13 @@ shp_js:
   contents:
     - js/vendor/leaflet/dist/leaflet.js
     - js/vendor/leaflet-providers/leaflet-providers.js
+    - js/vendor/spin.js/spin.js
+    - js/vendor/leaflet-spin/leaflet.spin.js
     - js/vendor/proj4/dist/proj4.js
-    - js/vendor/spinjs/spin.js
-    - js/vendor/leaflet.spin/leaflet.spin.js
     - js/vendor/shp2geojson/preview.js
     - js/vendor/shp2geojson/preprocess.js
-    - js/vendor/jszip/jszip.js
-    - js/vendor/jszip/jszip-utils.js
+    - js/vendor/jszip/dist/jszip.min.js
+    - js/vendor/jszip-utils/dist/jszip-utils.min.js
     - js/common_map.js
     - js/shp_preview.js
 shp_css:
