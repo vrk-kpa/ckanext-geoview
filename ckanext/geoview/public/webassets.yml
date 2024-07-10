@@ -6,7 +6,7 @@ openlayers_js:
       - base/main
   contents:
     - js/vendor/underscore/underscore.js
-    - js/vendor/proj4/dist/proj4-src.js
+    - js/vendor/proj4/dist/proj4.js
     - js/vendor/openlayers/ol-debug.js
     - js/vendor/ol-helpers/ol-helpers.js
     - js/vendor/ol-helpers/ol-layer-switcher.js
@@ -31,8 +31,8 @@ geojson_js:
       - base/main
   contents:
     - js/vendor/leaflet/dist/leaflet.js
-    - js/vendor/leaflet-providers.js
-    - js/vendor/proj4js/proj4.js
+    - js/vendor/leaflet-providers/leaflet-providers.js
+    - js/vendor/proj4/dist/proj4.js
     - js/vendor/proj4leaflet/src/proj4leaflet.js
     - js/common_map.js
     - js/geojson_preview.js
@@ -50,8 +50,8 @@ wmts_js:
       - base/main
   contents:
     - js/vendor/leaflet/dist/leaflet.js
-    - js/vendor/leaflet-providers.js
-    - js/vendor/proj4js/proj4.js
+    - js/vendor/leaflet-providers/leaflet-providers.js
+    - js/vendor/proj4/dist/proj4.js
     - js/common_map.js
     - js/wmts_preview.js
 wmts_css:
@@ -81,8 +81,8 @@ shp_js:
       - base/main
   contents:
     - js/vendor/leaflet/dist/leaflet.js
-    - js/vendor/leaflet-providers.js
-    - js/vendor/proj4js/proj4.js
+    - js/vendor/leaflet-providers/leaflet-providers.js
+    - js/vendor/proj4/dist/proj4.js
     - js/vendor/spinjs/spin.js
     - js/vendor/leaflet.spin/leaflet.spin.js
     - js/vendor/shp2geojson/preview.js
