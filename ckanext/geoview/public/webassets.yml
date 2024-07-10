@@ -60,19 +60,6 @@ wmts_css:
     - js/vendor/leaflet/dist/leaflet.css
     - css/wmts_preview.css
 
-bootstrap2_js:
-  filter: rjsmin
-  output: ckanext-geoview/%(version)s_bootstrap2.js
-  extra:
-    preload:
-      - base/main
-  contents:
-    - js/vendor/bootstrap2/bootstrap.js
-bootstrap2_css:
-  output: ckanext-geoview/%(version)s_bootstrap2.css
-  contents:
-    - js/vendor/bootstrap2/bootstrap.css
-
 shp_js:
   filter: rjsmin
   output: ckanext-geoview/%(version)s_shp.js
