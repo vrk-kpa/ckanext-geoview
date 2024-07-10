@@ -93,8 +93,9 @@
             },
 
             addLayer: function (resourceLayer) {
-
-                resourceLayer.setStyle(this.defaultStyle);
+                if (resourceLayer.setStyle) {
+                  resourceLayer.setStyle(this.defaultStyle);
+                }
 
                 if (this.options.ol_config.hide_overlays &&
                     this.options.ol_config.hide_overlays.toLowerCase() == "true") {
