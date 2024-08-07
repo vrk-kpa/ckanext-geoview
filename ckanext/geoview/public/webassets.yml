@@ -43,7 +43,7 @@ geojson_css:
     - css/geojson_preview.css
 
 wmts_js:
-  filter: rjsmin
+  filters: rjsmin
   output: ckanext-geoview/%(version)s_wmts.js
   extra:
     preload:
@@ -55,13 +55,14 @@ wmts_js:
     - js/common_map.js
     - js/wmts_preview.js
 wmts_css:
+  filters: cssrewrite
   output: ckanext-geoview/%(version)s_wmts.css
   contents:
     - js/vendor/leaflet/leaflet.css
     - css/wmts_preview.css
 
 shp_js:
-  filter: rjsmin
+  filters: rjsmin
   output: ckanext-geoview/%(version)s_shp.js
   extra:
     preload:
