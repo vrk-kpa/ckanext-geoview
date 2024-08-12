@@ -5,8 +5,9 @@ version = '0.2.0'
 setup(
     name='ckanext-geoview',
     version=version,
-    description='CKAN Geospatial ResourceView',
-    long_description=''' ''',
+    description='Geospatial viewers for CKAN resources',
+    long_description='This extension contains view plugins to display geospatial files and services in CKAN.',
+    long_description_content_type='text/plain',
     classifiers=[],
     keywords='',
     author='Philippe Duchesne, Adrià Mercader and contributors',
