@@ -977,7 +977,7 @@ ol.proj.addProjection(createEPSG4326Proj('EPSG:4326:LONLAT', 'enu'));
             })
     }
 
-    var parseWMSCapas = function (url, version, callback, failCallback) {
+    var parseWMSCapas = OL_HELPERS.parseWMSCapas = function (url, version, callback, failCallback) {
 
         if (version === undefined) {
             // try to force 1.3.0
