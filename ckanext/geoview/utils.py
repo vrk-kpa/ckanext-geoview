@@ -78,7 +78,7 @@ def proxy_service_url(req, url):
             r = requests.get(url, params=req.query_string, stream=True)
 
         if not r.ok:
-            base.abort(502, detail="Calling resource URL failed")
+            toolkit.abort(502, detail="Calling resource URL failed")
 
         # log.info('Request: {req}'.format(req=r.request.url))
         # log.info('Request Headers: {h}'.format(h=r.request.headers))
@@ -135,7 +135,7 @@ def proxy_service_url(req, url):
         )
 
         toolkit.abort(502, detail=details)
-    except requests.exceptions.Timeout as error:
+    except requests.exceptions.Timeout:
         details = "Could not proxy resource because the connection timed out."
         toolkit.abort(504, detail=details)
     return response
